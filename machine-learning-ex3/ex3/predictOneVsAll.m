@@ -30,8 +30,13 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
+% Dimention of X: 5000x401
+% Dimension of all_theta: 10x401
+% Dimension of X*all_theta': 5000x10
+% Dimension of p: 5000x1                                      
 
-
+h_theta = (X * all_theta');
+[max_value, p] = max(h_theta, [], 2);
 
 
 
